@@ -1,0 +1,6 @@
+default: fnl
+
+lua/%.lua: fnl/%.fnl fennel
+	fennel --compile $< > $@
+
+.PHONY: default
